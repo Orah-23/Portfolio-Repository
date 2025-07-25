@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Meta Tags for Character Encoding and Responsive Design -->
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<!-- Page Title -->
 	<title>Oratile Kgatlhanye - CV</title>
+
+	<!-- Font Awesome CDN for Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
+	<!-- CSS3 code for styling -->
 	<style>
+		/* base styling */
 		* {
 			box-sizing: border-box;
 		}
@@ -19,6 +26,7 @@
 			color: #333;
 		}
 
+		/* Main container layout */
 		.container {
 			display: flex;
 			flex-direction: row;
@@ -33,11 +41,13 @@
 			position: relative;
 		}
 
+		/* Animation on load */
 		@keyframes fadeIn {
 			from { opacity: 0; transform: translateY(30px); }
 			to { opacity: 1; transform: translateY(0); }
 		}
 
+		/* Sidebar styling */
 		.sidebar {
 			background-color: #2f2f2f;
 			color: #fff;
@@ -81,6 +91,7 @@
 			position: relative;
 		}
 
+		/* Button to turn on dark mode */
 		.dark-toggle {
 			position: absolute;
 			top: 20px;
@@ -99,6 +110,7 @@
 			background: #444;
 		}
 
+		/* Text and link styling */
 		a {
 			color: #2f2f2f;
 			text-decoration: none;
@@ -120,6 +132,7 @@
 			font-weight: bold;
 		}
 
+		/* Contact information layout */
 		.contact {
 			display: flex;
 			flex-wrap: wrap;
@@ -143,6 +156,7 @@
 			color: #2f2f2f;
 		}
 
+		/* Section title formatting */
 		.section {
 			margin-top: 30px;
 		}
@@ -155,6 +169,7 @@
 			margin-bottom: 15px;
 		}
 
+		/* Skills and languages bar styling */
 		.bar {
 			background: #ddd;
 			height: 6px;
@@ -189,6 +204,7 @@
 			line-height: 1.6;
 		}
 
+		/* Timeline styling */
 		.timeline {
 			border-left: 3px solid #999;
 			padding-left: 20px;
@@ -211,7 +227,7 @@
 			border-radius: 50%;
 		}
 
-		/* Dark mode */
+		/* Dark mode styling*/
 		.dark-mode {
 			background-color: #121212;
 			color: #f0f0f0;
@@ -233,6 +249,7 @@
 			color: #fff;
 		}
 
+		/* Adjustments for small screens */
 		@media (max-width: 768px) {
 			.container {
 				flex-direction: column;
@@ -256,17 +273,21 @@
 </head>
 
 <body>
+	<!-- Page layout -->
 	<div class="container">
+		<!-- Sidebar -->
 		<div class="sidebar">
 			<img src="me.jpg" alt="Oratile Kgatlhanye">
 			<h2>About Me</h2>
 			<p>Motivated IT student at North West University with a strong foundation in programming, networking, and cybersecurity. Passionate about innovative tech, real-world problem-solving, and impactful projects.</p>
 
 			<h2>Links</h2>
+			<!-- Social Links -->
 			<p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/oratile-kgatlhanye-4b31732b8">@oratile-kgatlhanye</a></p>
 			<p><i class="fab fa-github"></i> <a href="https://github.com/orah-23">@orah-23</a></p>
 
 			<h2>References</h2>
+			<!-- Reference Contacts -->
 			<p><strong>Mr Phenyo Modisane</strong><br>Information Technology Lecturer<br>
 			<i class="fas fa-phone"></i> +27-18-299-2597<br>
 			<i class="fas fa-envelope"></i> phenyo.modisane@nwu.ac.za</p>
@@ -285,12 +306,16 @@
 			</ul>
 		</div>
 
+		<!-- Main CV Content -->
 		<div class="main">
+			<!-- Dark Mode Button -->
 			<button class="dark-toggle" onclick="toggleTheme()">🌓 Dark Mode</button>
-			
+
+			<!-- Title -->
 			<h1>Francois Oratile Kgatlhanye</h1>
 			<p class="title">IT Student</p>
 
+			<!-- Contact Info -->
 			<div class="contact">
 				<div>
 					<i class="fas fa-location-dot"></i> South Africa<br>
@@ -302,6 +327,7 @@
 				</div>
 			</div>
 
+			<!-- Education Section -->
 			<div class="section">
 				<h2>Education</h2>
 				<div class="timeline">
@@ -323,6 +349,7 @@
 				</div>
 			</div>
 
+			<!-- Projects Section -->
 			<div class="section">
 				<h2>Projects</h2>
 				<ul>
@@ -332,6 +359,7 @@
 				</ul>
 			</div>
 
+			<!-- Skills Section -->
 			<div class="section">
 				<h2>Skills</h2>
 				<div class="skill">Computer Literacy
@@ -354,6 +382,7 @@
 				</div>
 			</div>
 
+			<!-- Language Proficiency -->
 			<div class="section">
 				<h2>Languages</h2>
 				<div class="language">English
@@ -366,10 +395,12 @@
 		</div>
 	</div>
 
+	<!-- Footer with dynamic year -->
 	<footer style="text-align:center; padding:20px 0; font-size:14px; color:#777;">
 		&copy; <span id="year"></span> Oratile Kgatlhanye. All rights reserved.
 	</footer>
 
+	<!-- JavaScript code for interactivity -->
 	<script>
 		window.addEventListener("DOMContentLoaded", () => {
 			const greeting = document.createElement("p");
@@ -383,6 +414,7 @@
 			greeting.style.marginTop = "10px";
 			document.querySelector(".main").prepend(greeting);
 
+			// Animate skill bars
 			const fills = document.querySelectorAll(".bar-fill");
 			fills.forEach(fill => {
 				const width = fill.style.width;
@@ -392,6 +424,7 @@
 				}, 300);
 			});
 
+			// Typing effect for subtitle
 			const title = document.querySelector(".title");
 			const fullText = "IT Student | Creative Thinker | Problem Solver";
 			let i = 0;
@@ -403,9 +436,11 @@
 			}
 			typeEffect();
 
+			// Update year in footer
 			document.getElementById("year").textContent = new Date().getFullYear();
 		});
 
+		// Turn on dark mode and play sound
 		function toggleTheme() {
 			document.body.classList.toggle("dark-mode");
 			new Audio("https://www.myinstants.com/media/sounds/button-10.mp3").play();
