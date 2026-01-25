@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+	<!-- Meta Tags for Character Encoding and Responsive Design -->
+	<meta charset="UTF-8" />
+	<!-- user-scalable=no is added to prevent manual zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+	<!-- Page Title -->
+	<title>Oratile Kgatlhanye - CV</title>
+
+	<!-- Font Awesome CDN for Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com" />
+
+	<!-- CSS3 code for styling -->
+	<style>
+		/* base styling */
+		* {
+			box-sizing: border-box;
+			/* Aggressive space reduction */
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: 'Segoe UI', sans-serif;
+			background: #f0f0f0;
+			color: #333;
+			overflow: hidden; /* CRITICAL: Hides main body scroll bar */
+			height: 100%; /* Ensure body takes full screen height */
+			font-size: 10px; /* Force small default font size */
+		}
+
+		/* Main container layout - FITS VIEWPORT HEIGHT & HIDES INTERNAL SCROLL */
+		.container {
+			display: grid;
+			grid-template-columns: 1fr 2fr; 
+			width: 100%; 
+			height: 100vh; /* CRITICAL: Make the container exactly the height of the screen */
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			position: relative;
+			overflow: hidden; /* CRITICAL: Hide internal scroll for container */
+		}
+
+		/* Animation on load (removed for simplicity/performance in this constrained view) */
+
+		/* Sidebar styling - HIDES INTERNAL SCROLL */
+		.sidebar {
+			background-color: #2f2f2f;
+			color: #fff;
+			padding: 10px 15px; /* Reduced padding */
+			overflow: hidden; /* CRITICAL: Hide internal scroll for sidebar */
+			display: flex;
+			flex-direction: column;
+		}
+		
+		/* Forces sidebar content to fit within its height */
+		.sidebar > * {
+			min-height: 0; /* Allows content to shrink */
+		}
+
+		.sidebar img {
+			width: 80px; /* Reduced image size */
+			height: 80px;
+			border-radius: 50%;
+			display: block;
+			margin: 5px auto 10px auto;
+		}
+
+		.sidebar h2 {
+			border-bottom: 1px solid #444;
+			padding-bottom: 3px;
+			margin-top: 10px; /* Reduced margin */
+			font-size: 14px; /* Reduced font size */
+		}
+
+		.sidebar a {
+			color: #ccc;
+			text-decoration: none;
+			word-break: break-word;
+		}
+
+		.sidebar ul {
+			padding-left: 15px;
+			list-style-type: square;
+		}
+		
+		.sidebar p, .sidebar li {
+			font-size: 10px;
+			line-height: 1.2;
+		}
+
+		/* Main content styling - HIDES INTERNAL SCROLL */
+		.main {
+			padding: 10px 15px; /* Reduced padding */
+			background-color: #fff;
+			overflow: hidden; /* CRITICAL: Hide internal scroll for main */
+			display: flex;
+			flex-direction: column;
+		}
+		
+		/* Forces main content to fit within its height */
+		.main > * {
+			min-height: 0; /* Allows content to shrink */
+		}
+
+		/* Button to turn on dark mode (can stay in main or be removed) */
+		.dark-toggle {
+			position: absolute;
+			top: 10px; /* Reduced top position */
+			right: 15px; /* Reduced right position */
+			padding: 5px 8px; /* Reduced padding */
+			font-size: 8px; /* Reduced font size */
+			/* ... other styles ... */
+		}
+
+		/* Text and link styling */
+		a {
+			color: #2f2f2f;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #000;
+			text-decoration: underline;
+		}
+
+		h1 {
+			margin-top: 0;
+			font-size: 20px; /* Reduced font size */
+			word-break: break-all;
+		}
+
+		.title {
+			color: #666;
+			margin-bottom: 10px; /* Reduced margin */
+			font-weight: bold;
+			font-size: 12px;
+		}
+
+		/* Contact information layout */
+		.contact {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 10px; /* Reduced margin */
+			font-size: 10px;
+		}
+		
+		.contact div {
+			width: 100%; 
+			margin-top: 5px; /* Reduced margin */
+		}
+
+		.contact i {
+			margin-right: 5px; /* Reduced margin */
+		}
+
+		/* Section title formatting */
+		.section {
+			margin-top: 10px; /* Reduced margin */
+		}
+
+		.section h2 {
+			font-size: 14px; /* Reduced font size */
+			border-bottom: 1px solid #ccc;
+			padding-bottom: 3px;
+			margin-bottom: 5px; /* Reduced margin */
+		}
+
+		/* Skills and languages bar styling */
+		.bar {
+			background: #ddd;
+			height: 4px; /* Reduced height */
+			margin-top: 3px; /* Reduced margin */
+		}
+
+		.bar-fill {
+			background: #2f2f2f;
+			height: 4px;
+		}
+		
+		.bar:hover .bar-fill::after {
+			font-size: 8px; /* Reduced font size */
+		}
+
+		.skill, .language {
+			margin-bottom: 5px; /* Reduced margin */
+		}
+
+		p, li {
+			font-size: 10px;
+			line-height: 1.2;
+		}
+
+		/* Timeline styling */
+		.timeline {
+			border-left: 2px solid #999; /* Reduced border width */
+			padding-left: 10px; /* Reduced padding */
+			margin-left: 5px; /* Reduced margin */
+		}
+
+		.timeline-item {
+			margin-bottom: 8px; /* Reduced margin */
+		}
+
+		.timeline-item::before {
+			left: -8px; /* Adjusted position */
+			top: 3px; /* Adjusted position */
+			width: 6px; /* Reduced size */
+			height: 6px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Page layout -->
+	<div class="container">
+		<!-- Sidebar -->
+		<div class="sidebar">
+			<img src="/me.jpg" alt="Oratile Kgatlhanye">
+			<h2>About Me</h2>
+			<p>Motivated IT graduate from North West University with a strong foundation in programming, networking, and cybersecurity. Passionate about innovative tech, real-world problem-solving, and impactful projects.</p>
+
+			<h2>Hobbies</h2>
+			<!-- Personal Hobbies -->
+			<ul>
+				<li>Reading</li>
+				<li>Gaming</li>
+				<li>Soccer</li>
+				<li>Drawing</li>
+				<li>Coding</li>
+			</ul>
+			
+			<h2>Links</h2>
+			<!-- Social Links -->
+			<p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com">@oratile-kgatlhanye</a></p>
+			<p><i class="fab fa-github"></i> <a href="https://github.com">@orah-23</a></p>
+			
+			<h2>References</h2>
+			<!-- Reference Contacts -->
+			<p><strong>Mr Tiaan Boshoff</strong><br>NWU Certification and Verification Officer<br>
+			<i class="fas fa-phone"></i> +27-18-285-2785<br>
+			<i class="fas fa-envelope"></i> tiaan.boshoff@nwu.ac.za</p>
+			
+			<p><strong>Mr Selebogo Benny Elias</strong><br>Ramatu High School Principal<br>
+			<i class="fas fa-phone"></i> +27-83-843-3625<br>
+			<i class="fas fa-envelope"></i> ramatuhigh@yahoo.com</p>
+		</div>
+
+		<!-- Main CV Content -->
+		<div class="main">
+			
+			<!-- Title -->
+			<h1>Oratile Kgatlhanye</h1>
+			<p class="title">Information Technology Engineer</p>
+
+			<!-- Contact Info -->
+			<div class="contact">
+				<div>
+					<i class="fas fa-location-dot"></i> South Africa<br>
+					<i class="fas fa-map-pin"></i> 1265 Nyanto St, Lehurutshe Unit 1, Zeerust
+				</div>
+				<div>
+					<i class="fas fa-phone"></i> +27-73-245-4074<br>
+					<i class="fas fa-envelope"></i> oratilefrancois.kgatlhanye@gmail.com
+				</div>
+			</div>
+
+			<!-- Education Section -->
+			<div class="section">
+				<h2>Education</h2>
+				<div class="timeline">
+					<div class="timeline-item">
+						<p><strong>North-West University</strong><br>
+						BSc in Information Technology<br>
+						<em>2023 – 2025</em></p>
+					</div>
+					<div class="timeline-item">
+						<p><strong>Simplilearn</strong><br>
+						Introduction to Cyber Security<br>
+						<em>Completed: 2024</em></p>
+					</div>
+					<div class="timeline-item">
+						<p><strong>Golden Key International Honour Society</strong><br>
+					 Golden Key Certificate<br>
+						<em>Completed: 2025</em></p>
+					</div>
+					<div class="timeline-item">
+						<p><strong>Cisco Networking Academy</strong><br>
+					 Getting Started with Cisco Packet Tracer<br>
+						<em>Completed: 2025</em></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Skills Section -->
+			<div class="section">
+				<h2>Skills</h2>
+				<div class="skill">Microsoft Office
+					<div class="bar"><div class="bar-fill" style="width: 90%;" data-label="90%"></div></div>
+				</div>
+				<div class="skill">Networking Infrastructure
+					<div class="bar"><div class="bar-fill" style="width: 70%;" data-label="70%"></div></div>
+				</div>
+				<div class="skill">Problem-Solving
+					<div class="bar"><div class="bar-fill" style="width: 80%;" data-label="80%"></div></div>
+				</div>
+				<div class="skill">Time management
+					<div class="bar"><div class="bar-fill" style="width: 85%;" data-label="85%"></div></div>
+				</div>
+				<div class="skill">Communication
+					<div class="bar"><div class="bar-fill" style="width: 95%;" data-label="95%"></div></div>
+				</div>
+				<div class="skill">Programming (Python, Java)
+					<div class="bar"><div class="bar-fill" style="width: 85%;" data-label="85%"></div></div>
+				</div>
+			</div>
+			
+			<!-- Language Proficiency -->
+			<div class="section">
+				<h2>Languages</h2>
+				<div class="language">English
+					<div class="bar"><div class="bar-fill" style="width: 75%;" data-label="75%"></div></div>
+				</div>
+				<div class="language">Tswana
+					<div class="bar"><div class="bar-fill" style="width: 95%;" data-label="95%"></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer with dynamic year -->
+	<footer style="text-align:center; padding:20px 0; font-size:14px; color:#777; display: none;">
+		&copy; <span id="year"></span> Oratile Kgatlhanye. All rights reserved.
+	</footer>
+
+	<!-- Script to populate the dynamic year -->
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
