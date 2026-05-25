@@ -37,6 +37,6 @@ This Virtual CV is hosted on GitHub Pages, enabling easy and free web hosting di
 
 ## Author: Francois Oratile Kgatlhanye
 
-IT Student at North West University  
-GitHub Profile - https://github.com/Orah-23 
-LinkedIn Profile - https://www.linkedin.com/in/oratile-kgatlhanye-4b31732b8
+- IT Student at North West University  
+- GitHub Profile - https://github.com/Orah-23 
+- LinkedIn Profile - https://www.linkedin.com/in/oratile-kgatlhanye-4b31732b8
