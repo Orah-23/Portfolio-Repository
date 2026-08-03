@@ -24,7 +24,7 @@ The Virtual CV is built with **HTML**, **CSS**, and **JavaScript**, featuring a 
 
 - Download this repository.
 - Open `index.html` in any modern web browser of your choice.
-- Explore the sections: Home, About, Education, Skills, Projects, and Contact.
+- Explore the sections: Home, Gallery, About, Education, Skills, Projects, and Contact.
 
 ## Deployment
 
